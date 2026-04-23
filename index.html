@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RYGEN.IO</title>
+  <title>RyGen • Uncompromised AI</title>
   <link rel="icon" type="image/png" href="circle_logo.png">
   <style>
     :root {
@@ -183,24 +183,36 @@
     }
 
     .hero img {
-      width: 315px; /* --- INCREASED SIZE AGAIN --- */
+      width: 315px; 
       height: auto;
       margin-bottom: 24px;
       filter: drop-shadow(0 0 20px rgba(255,255,255,0.1));
     }
     
-    /* --- UPDATED --- Bold, Static Title */
+    /* --- NEW --- Dynamic Hero Title */
     .hero-title {
-      font-size: clamp(32px, 6vw, 64px);
-      font-weight: 500; /* --- MADE BOLD --- */
-      letter-spacing: 0.12em;
-      margin: 0 0 40px 0;
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin: 0 0 16px 0;
       text-transform: uppercase;
-      background: linear-gradient(45deg, #e0f2ff 30%, #ffffff 50%, #cceaff 70%);
+      background: linear-gradient(45deg, #ffffff 30%, #4ab7ff 70%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      text-shadow: 0 0 40px rgba(162, 207, 255, 0.2);
+      text-shadow: 0 0 30px rgba(74, 183, 255, 0.3);
+    }
+
+    /* --- NEW --- Hero Subtitle */
+    .hero-subtitle {
+      color: rgba(233, 245, 255, 0.7);
+      font-size: clamp(12px, 2.5vw, 16px);
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: 0.1em;
+      margin: 0 0 40px 0;
+      max-width: 600px;
+      text-transform: uppercase;
     }
     
     /* Glowing Tracer Button for Documentation */
@@ -255,7 +267,8 @@
     @keyframes trace3 {
         0% { right: -100%; } 50%, 100% { right: 100%; }
     }
-
+    
+    /* Tracer button */
     .tracer-btn span:nth-child(4) {
         bottom: -100%;
         left: 0;
@@ -280,7 +293,7 @@
       gap: 10px;
       background: rgba(0, 0, 0, 0.4);
       border: 1px solid rgba(255,255,255,0.1);
-      padding: 10px 20px; /* --- INCREASED PADDING --- */
+      padding: 10px 20px; 
       color: rgba(255, 255, 255, 0.7);
       font-size: 10px;
       letter-spacing: 0.2em;
@@ -304,12 +317,12 @@
       100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); }
     }
 
-    /* --- MODIFIED --- Bottom Middle Copyright */
+    /* Bottom Middle Copyright */
     .copyright {
       position: absolute;
-      bottom: 24px; /* --- MOVED DOWN --- */
-      left: 50%; /* --- CENTERED --- */
-      transform: translateX(-50%); /* --- CENTERED --- */
+      bottom: 24px; 
+      left: 50%; 
+      transform: translateX(-50%); 
       color: rgba(255, 255, 255, 0.5);
       font-size: 10px;
       font-weight: 500;
@@ -321,7 +334,7 @@
       white-space: nowrap;
     }
 
-    /* --- NEW --- Bottom Left Links */
+    /* Bottom Left Links */
     .footer-links {
       position: absolute;
       bottom: 30px;
@@ -343,7 +356,7 @@
     }
     
     .footer-links a svg {
-      width: 32px; /* --- LARGER --- */
+      width: 32px; 
       height: 32px;
       display: block;
     }
@@ -362,6 +375,12 @@
         padding: 10px 16px;
         font-size: 9px;
       }
+      .hero {
+        top: 55%;
+      }
+      .hero-subtitle {
+        margin-bottom: 30px; /* Reduced space on smaller screens */
+      }
       .status-btn {
         display: none; /* Hide status on mobile to avoid overlap */
       }
@@ -376,9 +395,6 @@
         text-align: center;
         left: 0;
         transform: none;
-      }
-      .hero {
-        top: 55%;
       }
     }
   </style>
@@ -408,14 +424,18 @@
     <!-- Center Content -->
     <div class="hero">
       <img src="main_logo.png" alt="RyGen Main Logo">
-      <h1 class="hero-title">Rize with RyGen</h1>
+      
+      <!-- New Title & Subtitle Theme -->
+      <h1 class="hero-title">Uncompromised AI</h1>
+      <p class="hero-subtitle">The world's most affordable Gateway to AI.<br>Enterprise security. Absolute privacy.</p>
+      
       <a href="/docs" class="btn tracer-btn" target="_blank">
         <!-- Spans for the tracer effect -->
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        Documentation
+        Start Building Now
       </a>
     </div>
 
@@ -425,7 +445,7 @@
       API Uptime ❯❯❯
     </a>
 
-    <!-- --- NEW --- Bottom Left Links -->
+    <!-- Bottom Left Links -->
     <div class="footer-links">
       <a href="mailto:support@rygen.io" target="_blank" title="Contact Support">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -436,7 +456,7 @@
       </a>
     </div>
 
-    <!-- --- MODIFIED --- Bottom Middle Copyright Text -->
+    <!-- Bottom Middle Copyright Text -->
     <p class="copyright">All Rights Reserved • RYGEN.IO • 2026</p>
   </div>
 
@@ -636,6 +656,6 @@
       requestAnimationFrame(render);
     })();
   </script>
-
+  
 </body>
 </html>
