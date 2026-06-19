@@ -230,7 +230,7 @@
     const applyMarginAndFloor = (amount) => {
       if (amount === null || amount === undefined || isNaN(amount)) return null;
       let withMargin = amount * 1.05; // Add 5% Margin
-      if (withMargin < 0.05) { return withMargin; }
+      if (withMargin < 0.05) { return Math.floor(withMargin * 100) / 100; }
       return Math.floor(withMargin * 20) / 20;
     };
     
