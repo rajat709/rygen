@@ -271,12 +271,12 @@
       providers = Array.from(providers).sort();
 
       // Set Default to Moonshot if exists, else 'all'
-      if (providers.includes('deepseek-ai')) {
+      if (providers.includes('rygen')) {
+        currentCategory = 'rygen';
+      } else if (providers.includes('deepseek-ai')) {
         currentCategory = 'deepseek-ai';
-      } else if (providers.includes('moonshot')) {
-        currentCategory = 'moonshot';
       }
-
+      
       let tabsHTML = `<button class="tab ${currentCategory === 'all' ? 'active' : ''}" onclick="setCategory('all')">ALL</button>`;
       
       providers.forEach(p => {
