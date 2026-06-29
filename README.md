@@ -1,1 +1,1 @@
-# rygen
+# RyGen - AI Inference Platform
